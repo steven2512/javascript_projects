@@ -1,9 +1,12 @@
-const taskForm = document.querySelector('#taskForm')
+
 const task = document.querySelector('#task')
-const taskButton = document.querySelector('#taskButton')
+const form = document.querySelector('#taskForm')
 
 
-task.addEventListener('change', function (e) {
-    const newTask = document.createElement('li')
-    newTask.innerText = 
-})
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault()
+//     const toDoList = document.querySelector('#toDoList')
+//     const newTask = document.createElement('li')
+//     // newTask.innerText =
+//     toDoList.append(newTask)
+// })
