@@ -1,1 +1,1 @@
-A simple website where users can add, edit, remove, and fully customize day-to-day tasks to have a perfect control over their time.
+An intuitive web platform created with HTML, CSS, and JavaScript that enables users to add, edit, delete, and fully personalize daily tasks for optimal time management.
