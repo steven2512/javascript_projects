@@ -119,6 +119,10 @@ select {
     padding: 0;
 }
 
+h5 {
+    margin: 5px 0 10px;
+}
+
 .history-rc li {
     background-color: rgb(255, 255, 255);
     box-shadow: var(--box-shadow);
@@ -128,4 +132,13 @@ select {
     justify-content: space-between;
     padding: 5px 10px;
     border-radius: 5px;
+    margin-top: 2px
+}
+
+.history-rc li.plus {
+    border-right: green;
+}
+
+.history-rc li.minus {
+    border-right: 5px solid red;
 }
