@@ -136,7 +136,7 @@ h5 {
 }
 
 .history-rc li.plus {
-    border-right: green;
+    border-right: 5px solid green;
 }
 
 .history-rc li.minus {
