@@ -120,10 +120,11 @@ select {
 }
 
 .history-rc li {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     box-shadow: var(--box-shadow);
     font-weight: 500;
     font-style: italic;
     display: flex;
     justify-content: space-between;
+    padding: 0 5px;
 }
