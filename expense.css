@@ -142,3 +142,9 @@ h5 {
 .history-rc li.minus {
     border-right: 5px solid red;
 }
+
+#note-rc {
+    width: 90%;
+    text-align: right;
+    margin-right: 10px
+}
