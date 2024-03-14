@@ -38,3 +38,16 @@ h4 {
 #balanceAmount {
     font-size: 22px;
 }
+
+.inc-exp-container {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.inc-exp-container>div {
+    text-align: center;
+}
