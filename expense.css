@@ -146,8 +146,9 @@ h5 {
 #note-rc {
     width: 90%;
     text-align: right;
-    margin-right: 10px;
+    margin-right: 1px;
     border-right: 1px solid black;
+    padding-right: 8px
 }
 
 #delete {
@@ -155,10 +156,9 @@ h5 {
     border: 0;
     margin-top: 2px 0px 0 0;
     text-align: center;
-    transition: 0.2s;
 }
 
 #delete:hover {
     cursor: pointer;
-    transform: scale(1.05)
+    transform: scale(1.1);
 }
