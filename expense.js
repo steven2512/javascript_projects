@@ -7,18 +7,23 @@ const amount = document.querySelector('#amount')
 const date = document.querySelector('#date')
 const type = document.querySelector('#type')
 
-
-form.addEventListener('submit', function (e) {
-    e.preventDefault()
+//gather user input for transaction and append to history section at the end
+function addTransaction() {
     let newTransaction = document.createElement('li');
     let newAmount = document.createElement('span')
     let newNote = document.createElement('span')
-    // let newDate = document.createElement
-    let btn = document.createElement('button')
-    newNote.innerText = note.value
+    newAmount.className = 'amount-rc'
+    newNote.className = 'note-rc'
     newAmount.innerText = amount.value
-    newTransaction.append(newNote, newAmount)
+    newNote.innerText = note.value
+    newTransaction.append(newAmount)
     history.append(newTransaction)
+}
+
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault()
+    addTransaction()
 
 })
 
