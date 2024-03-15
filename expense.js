@@ -6,3 +6,9 @@ const note = document.querySelector('#note')
 const amount = document.querySelector('#amount')
 const date = document.querySelector('#date')
 const type = document.querySelector('#type')
+
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault()
+
+})
