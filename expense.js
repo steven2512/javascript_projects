@@ -10,7 +10,18 @@ const type = document.querySelector('#type')
 
 form.addEventListener('submit', function (e) {
     e.preventDefault()
-    newTransaction = document.createElement('li');
-    newAmount = document.createElement('span')
-    newNote = document.createElement('note')
+    let newTransaction = document.createElement('li');
+    let newAmount = document.createElement('span')
+    let newNote = document.createElement('span')
+    // let newDate = document.createElement
+    let btn = document.createElement('button')
+    newNote.innerText = note.value
+    newAmount.innerText = amount.value
+    newTransaction.append(newNote, newAmount)
+    history.append(newTransaction)
+
+})
+
+note.addEventListener('change', function (e) {
+
 })
