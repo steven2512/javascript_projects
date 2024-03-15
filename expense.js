@@ -1,0 +1,6 @@
+const balance = document.querySelector('#balanceAmount')
+const money_plus = document.querySelector('money-plus')
+const history = document.querySelector('#history-rc')
+const form = document.querySelector('#tst-form')
+const balance = document.querySelector('#balanceAmount')
+const balance = document.querySelector('#balanceAmount')
