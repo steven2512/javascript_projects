@@ -10,5 +10,7 @@ const type = document.querySelector('#type')
 
 form.addEventListener('submit', function (e) {
     e.preventDefault()
-
+    newTransaction = document.createElement('li');
+    newAmount = document.createElement('span')
+    newNote = document.createElement('note')
 })
