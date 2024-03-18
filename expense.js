@@ -7,6 +7,16 @@ const amount = document.querySelector('#amount')
 const date = document.querySelector('#date')
 const type = document.querySelector('#type')
 
+//form validation
+function validCheck() {
+    try {
+        if amount.value 
+    } catch (error) {
+        alert()
+    }
+
+}
+
 //gather user input for transaction and append to history section at the end
 function addTransaction() {
     //creating new elements in the DOM
