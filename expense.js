@@ -87,6 +87,7 @@ function updateCashFlow() {
     })
     money_plus.innerText = `+$${totalIncome}`
     money_minus.innerText = `-$${totalExpense}`
+    balance.innerText = `$${totalIncome + (-totalExpense)}`
 }
 
 
