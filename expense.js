@@ -13,20 +13,27 @@ function addTransaction() {
     let newTransaction = document.createElement('li');
     let newAmount = document.createElement('span')
     let newNote = document.createElement('span')
+    let deleteButton = document.createElement('button')
     //Assigning class names to children elements
     newAmount.className = 'amount-rc'
     newNote.className = 'note-rc'
+    deleteButton.className = 'delete'
+    //Assign the delete button
+    deleteButton.innerHTML = '<i class="fa-regular fa-trash-can"></i>'
     //Assign the input note
     newNote.innerText = note.value
     //Assign the amount note
-    if (type.value === 'Expense') {
-        newAmount.innerText = `$${amount.value}`
-    } else {
+    if (type.value === 'expense') {
+        newTransaction.className = 'minus'
         newAmount.innerText = `-$${amount.value}`
+    } else {
+        newTransaction.className = 'plus'
+        newAmount.innerText = `+$${amount.value}`
     }
-    newTransaction.append(newAmount)
-    newTransaction.append(note.value)
+    //append to the history section
+    newTransaction.append(newAmount, note.value, deleteButton)
     history.append(newTransaction)
+
 }
 
 
