@@ -6,16 +6,29 @@ const note = document.querySelector('#note')
 const amount = document.querySelector('#amount')
 const date = document.querySelector('#date')
 const type = document.querySelector('#type')
+const errorMsg = document.querySelector('.error')
 
 //form validation
-function validCheck() {
-    try {
-        if amount.value 
-    } catch (error) {
-        alert()
-    }
-
+function showError(target, msg) {
+    let element = target.nextElementSibling
+    element.className = ('error invalid')
+    element.innerText = msg
 }
+
+function validCheck(targetArr) {
+    let isValid = true
+    for (let target of targetArr) {
+        if (!target.value.trim()) {
+            showError(target, 'Field can not be empty')
+            isValid = false
+        }
+        else {
+            showSuccess()
+        }
+    }
+    return isValid
+}
+
 
 //gather user input for transaction and append to history section at the end
 function addTransaction() {
@@ -55,9 +68,12 @@ function updateCashFlow() {
 
 form.addEventListener('submit', function (e) {
     e.preventDefault()
-    validCheck()
-    addTransaction()
-    updateCashFlow()
+    let valid = validCheck([note, amount])
+    if (valid) {
+        addTransaction()
+        updateCashFlow()
+    }
+
 
 })
 

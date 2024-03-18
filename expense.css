@@ -85,6 +85,14 @@ label {
     font-weight: 500;
 }
 
+.error {
+    visibility: hidden;
+}
+
+.error.invalid {
+    visibility: visible;
+    color: red;
+}
 
 input[type='text'],
 input[type='number'],
