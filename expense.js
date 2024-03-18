@@ -1,5 +1,6 @@
 const balance = document.querySelector('#balanceAmount')
 const money_plus = document.querySelector('money-plus')
+const money_minus = document.querySelector('money-minus')
 const history = document.querySelector('#history-rc')
 const plus = document.querySelectorAll('.history-rc li.plus .amount-rc')
 const minus = document.querySelectorAll('.history-rc li.minus .amount-rc')
@@ -69,7 +70,17 @@ function addTransaction() {
 }
 
 function updateCashFlow() {
+    let totalIncome = 0
+    let totalExpense = 0
+    plus.forEach((income) => {
+        totalIncome += +income.innerText
 
+    })
+    minus.forEach((income) => {
+        totalExpense += +income.innerText
+    })
+    money_plus.innerText = totalIncome
+    money_minus.innerText = totalExpense
 }
 
 
