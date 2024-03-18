@@ -49,6 +49,7 @@ function addTransaction() {
     deleteButton.className = 'delete'
     //Assign the delete button
     deleteButton.innerHTML = '<i class="fa-regular fa-trash-can"></i>'
+
     //Assign the input note
     newNote.innerText = note.value
     //Assign the amount note
@@ -64,6 +65,11 @@ function addTransaction() {
     //append to the history section
     newTransaction.append(newAmount, newNote, deleteButton)
     history.append(newTransaction)
+    //add functionality for delete btn
+    deleteButton.addEventListener('click', function () {
+        history.removeChild(newTransaction)
+        updateCashFlow()
+    })
 
 }
 
