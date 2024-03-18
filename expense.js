@@ -35,6 +35,15 @@ function validCheck(targetArr) {
     return isValid
 }
 
+//Clear user input after succesfully adding transaction:
+function resetInput(form) {
+    let input = document.querySelectorAll('.transaction input')
+    input.forEach((input) => {
+        input.value = ''
+    })
+    type.value = 'Expense'
+}
+
 
 //update history section through transaction
 function addTransaction() {
@@ -98,6 +107,7 @@ form.addEventListener('submit', function (e) {
         addTransaction()
         updateCashFlow()
     }
+    resetInput()
 
 
 })
