@@ -8,13 +8,18 @@ const date = document.querySelector('#date')
 const type = document.querySelector('#type')
 const errorMsg = document.querySelector('.error')
 
-//form validation
+//form validation error mesages
 function showError(target, msg) {
     let element = target.nextElementSibling
     element.className = ('error invalid')
     element.innerText = msg
 }
+function showSuccess(target) {
+    let element = target.nextElementSibling
+    element.className = 'error'
+}
 
+//form validation
 function validCheck(targetArr) {
     let isValid = true
     for (let target of targetArr) {
@@ -23,14 +28,14 @@ function validCheck(targetArr) {
             isValid = false
         }
         else {
-            showSuccess()
+            showSuccess(target)
         }
     }
     return isValid
 }
 
 
-//gather user input for transaction and append to history section at the end
+//update history section through transaction
 function addTransaction() {
     //creating new elements in the DOM
     let newTransaction = document.createElement('li');
