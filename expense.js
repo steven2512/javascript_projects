@@ -25,10 +25,12 @@ function addTransaction() {
     //Assign the amount note
     if (type.value === 'expense') {
         newTransaction.className = 'minus'
-        newAmount.innerText = `-$${amount.value}`
+        newTransaction.append('-$')
+        newAmount.innerText = amount.value
     } else {
         newTransaction.className = 'plus'
-        newAmount.innerText = `+$${amount.value}`
+        newTransaction.append('+$')
+        newAmount.innerText = amount.value
     }
     //append to the history section
     newTransaction.append(newAmount, newNote, deleteButton)
@@ -36,10 +38,16 @@ function addTransaction() {
 
 }
 
+function updateCashFlow() {
+
+}
+
 
 form.addEventListener('submit', function (e) {
     e.preventDefault()
+    validCheck()
     addTransaction()
+    updateCashFlow()
 
 })
 
