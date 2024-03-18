@@ -16,14 +16,16 @@ function addTransaction() {
     //Assigning class names to children elements
     newAmount.className = 'amount-rc'
     newNote.className = 'note-rc'
-    //Note for new transaction
+    //Assign the input note
     newNote.innerText = note.value
-
-
-    if (type.value) === 'Expense' {
-        newAmount.innerText = '+' + amount.value
+    //Assign the amount note
+    if (type.value === 'Expense') {
+        newAmount.innerText = `$${amount.value}`
+    } else {
+        newAmount.innerText = `-$${amount.value}`
     }
     newTransaction.append(newAmount)
+    newTransaction.append(note.value)
     history.append(newTransaction)
 }
 
