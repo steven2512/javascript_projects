@@ -31,7 +31,7 @@ function addTransaction() {
         newAmount.innerText = `+$${amount.value}`
     }
     //append to the history section
-    newTransaction.append(newAmount, note.value, deleteButton)
+    newTransaction.append(newAmount, newNote, deleteButton)
     history.append(newTransaction)
 
 }
