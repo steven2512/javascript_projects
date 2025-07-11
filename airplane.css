@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap') * {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(47, 134, 112);
+    color: white;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lato", sans-serif;
+}
+
+.airplane-container {
+    margin: 20px 0;
+}
+
+.airplane-container select {
+    background-color: white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 5px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 5px;
+}
+
+.row {
+    display: flex;
+}
+
+.seat.selected {
+    background-color: rgb(59, 147, 210);
+}
+
+.seat.occupied {
+    background-color: rgba(0, 0, 0, 0.281);
+}
+
+.container {
+    perspective: 1000px;
+    margin-bottom: 5px;
+}
+
+.seat {
+    background-color: rgb(209, 203, 203);
+    height: 12px;
+    width: 15px;
+    margin: 4px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+
+.seat:nth-of-type(3),
+.seat:nth-of-type(7) {
+    margin-right: 15px;
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    background-color: rgb(51, 112, 253);
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+    background-color: rgb(209, 203, 203);
+}
+
+.showcase .seat.selected:hover {
+    cursor: default;
+    transform: scale(1);
+    background-color: rgb(59, 147, 210);
+}
+
+.showcase {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.showcase small {
+    margin-left: 2px;
+}
+
+.screen {
+    background-color: white;
+    height: 75px;
+    border: 0;
+    width: 100%;
+    transform: rotateX(-35deg);
+    margin-bottom: 35px;
+    margin-top: 10px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.7)
+}
+
+#count,
+#cost {
+    color: rgb(238, 255, 0);
+}
+
+.text {
+    margin-bottom: 0px;
+    margin-top: 15px;
+}
+
+.clear {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    color: rgba(255, 255, 255, 0.862);
+    transition: 0.2s ease-in;
+}
+
+.clear:hover {
+    cursor: pointer;
+    background-color: rgba(0, 200, 255, 0.1);
+    color: white;
+}
